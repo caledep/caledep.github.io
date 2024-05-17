@@ -32,4 +32,11 @@ const count = ref(0)
   align-items: center;
   font-size: 2rem;
 }
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  
+}
 </style>

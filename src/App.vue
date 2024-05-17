@@ -6,7 +6,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <div>
     <img src="/cd_logo.svg" class="logo" alt="Cale DaPaolo logo" />
   </div>
-  <HelloWorld msg="Cale DePaolos - Personal Website" />
+  <HelloWorld msg="Cale DePaolo's - Personal Website" />
 </template>
 
 <style scoped>
