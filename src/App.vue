@@ -1,25 +1,58 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
 
 <template>
-  <div>
-    <img src="/cd_logo.svg" class="logo" alt="Cale DaPaolo logo" />
+  <div class="app">
+    <Sidebar />
+    <router-view />
   </div>
-  <HelloWorld msg="Cale DePaolo's - Personal Website" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup>
+import Sidebar from './components/Sidebar.vue'
+
+
+
+</script>
+
+<style Lang="scss">
+:root {
+  --primary: #161A4A;
+  --primary-hover: #232757; 
+  --gray: #64748b;
+  --dark: #1e293b;
+  --dark-alt: #C08552;
+  --light: #FFFCE2;
+  --sidebar-width: 280px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Red Hat Display', sans-serif;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+body {
+  background: var(--light);
 }
+
+button {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+.app {
+  display: flex;
+}
+main {
+  flex: 1 1 0;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding-left: 6rem;
+  }
+}
+
+
 </style>
