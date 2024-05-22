@@ -32,7 +32,8 @@ import Sidebar from './components/Sidebar.vue'
 }
 
 body {
-  background: var(--light);
+  background-image: url(./assets/wyo_valley_pattern.svg);
+  justify-content: center;
 }
 
 button {
@@ -47,8 +48,9 @@ button {
 }
 main {
   flex: 1 1 0;
-  padding: 2rem;
 
+  padding: 2rem;
+  padding-top: 6rem;
   @media (max-width: 768px) {
     padding-left: 6rem;
   }
