@@ -1,7 +1,7 @@
 <template>
     <main class="education-page">
         <div class="card">
-            <h1>Education</h1>
+            <h1>Education & Skills</h1>
         </div>
         <p class="construction_notice">
             <img src="/icon_construction_dark.svg" class="icon" alt="construction icon" />

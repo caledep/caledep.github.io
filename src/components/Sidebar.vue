@@ -18,7 +18,7 @@
           </router-link>
           <router-link class="button" to="/education">
             <span class="material-icons">school</span>
-            <span class="text">Education</span>
+            <span class="text">Education & skills</span>
           </router-link>
           <router-link class="button" to="/timeline">
             <span class="material-icons">timeline</span>

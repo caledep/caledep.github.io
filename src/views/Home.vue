@@ -5,8 +5,8 @@
 <template>
     <main class="home-page">
         <div class="portrait-intro">
-            <div>
-                <img src="../../public/portrait_drawn_med.svg" class="portrait-image" alt="vue">
+            <div class="portrait-image">
+                <img src="../../public/portrait_drawn_med.svg" class="image" alt="vue">
             </div>
             <div class="intro-block">
                 <h1>Introduction</h1>
@@ -28,17 +28,22 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
     .portrait-intro {
         display: flex;
         flex-direction: row;
         gap: 2rem;
         align-items: flex-end;
+        
         .portrait-image {
             border: solid;
             border-width: 0.2rem;
             border-color: #161a4a;
             border-radius:2em;
+            min-width:24rem;
             max-width: 24rem;
+            max-height: 30rem;
+            overflow: hidden;
         } 
 
         .intro-block {
