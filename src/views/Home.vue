@@ -9,9 +9,9 @@
                 <img src="../../public/portrait_drawn_med.svg" class="image" alt="vue">
             </div>
             <div class="intro-block">
-                <h1>Introduction</h1>
+                <h1>Intro</h1>
                 <hr>
-                <p>Hello! I'm Cale DePaolo, a passionate web developer and digital enthusiast based in the beautiful state of Wyoming. With 18 months of professional experience in the tech industry, I've developed a strong foundation in creating seamless, user-friendly websites and applications. My journey started with a curiosity for coding and has quickly evolved into a rewarding career where I business with digital solutions. When I'm not immersed in coding, you can find me exploring Wyoming's stunning landscapes, experimenting with new recipes in the kitchen, or out at my local course for a round of golf. I believe in continuous learning and staying ahead of the curve in this fast-paced digital world. Welcome to my corner of the internet, where I share my projects and a little about myself. Let's build something amazing together!</p>
+                <p>Hello! I'm Cale DePaolo, a passionate web developer and digital enthusiast based in the beautiful state of Wyoming. With a year and a half of professional experience in the tech industry, I've developed a strong foundation in creating seamless, user-friendly websites and applications. My journey started with a curiosity for coding and has quickly evolved into a rewarding career where I help companies create unique digital solutions. When I'm not immersed in coding, you can find me exploring Wyoming's stunning landscapes, experimenting with new recipes in the kitchen, or out at my local course for a round of golf. I believe in continuous learning and staying ahead of the curve in this fast-paced digital world. Welcome to my corner of the internet, where I share my projects and a little about myself. Let's build something amazing together!</p>
             </div>
         </div>
         
