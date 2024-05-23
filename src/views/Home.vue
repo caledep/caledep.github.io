@@ -82,19 +82,19 @@ main {
         .portrait-intro {
             display: flex;
             flex-direction: column;
-            max-width: 20rem;     
+            max-width: 100%;     
             align-items: flex-start;
         }
         .intro-block {
             display: flex;
             min-width: 20rem;
             flex-direction: column;
-            max-width: 20rem;
+            max-width: 100%;
         }
         .bio-block { 
             display: flex;
             flex-direction: column;
-            max-width: 20rem;
+            max-width: 100%;
         }
 
 
