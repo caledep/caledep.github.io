@@ -18,7 +18,7 @@
           </router-link>
           <router-link class="button" to="/education">
             <span class="material-icons">school</span>
-            <span class="text">Education</span>
+            <span class="text">Education & skills</span>
           </router-link>
           <router-link class="button" to="/timeline">
             <span class="material-icons">timeline</span>
@@ -53,7 +53,8 @@ aside {
   flex-direction: column;
   width: calc(2rem);
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   padding: 1rem;
   background-color: var(--primary);
   color: var(--light);
@@ -62,7 +63,6 @@ aside {
     display: flex;
     .button {
       display: flex;
-      align-items: center;
       text-decoration: none;
       transition: 0.4s ease-out;
       .logo-icon {
@@ -114,6 +114,8 @@ aside {
 
   .menu {
     margin: 0 -1rem;
+    justify-content: center;
+    padding-top: 6rem;
     .button {
       display: flex;
       align-items: center;
@@ -172,6 +174,7 @@ aside {
   @media (max-width: 768px) {
     position: fixed;
     z-index: 99;
+    height: auto;
   }
 }
 </style>
