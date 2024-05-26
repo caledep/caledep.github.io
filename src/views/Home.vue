@@ -32,7 +32,9 @@ main {
    }
    div {
       color: var(--primary);
-
+   }
+   p {
+      font-size: 20px;
    }
    .portrait-intro {
       display: flex;
