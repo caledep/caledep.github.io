@@ -1,9 +1,9 @@
 
 <template>
-  <div class="app">
-    <Sidebar />
-    <router-view />
-  </div>
+   <div class="app">
+      <Sidebar />
+      <router-view />
+   </div>
 </template>
 
 <script setup>
@@ -15,45 +15,45 @@ import Sidebar from './components/Sidebar.vue'
 
 <style Lang="scss">
 :root {
-  --primary: #161A4A;
-  --primary-hover: #232757; 
-  --gray: #64748b;
-  --dark: #1e293b;
-  --dark-alt: #C08552;
-  --light: #FFFCE2;
-  --sidebar-width: 280px;
+   --primary: #161A4A;
+   --primary-hover: #232757; 
+   --gray: #64748b;
+   --dark: #1e293b;
+   --dark-alt: #C08552;
+   --light: #FFFCE2;
+   --sidebar-width: 280px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    font-family: 'Red Hat Display', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: 0;
+   font-family: 'Red Hat Display', sans-serif;
 }
 
 body {
-  background-image: url(./assets/wyo_valley_pattern_2.svg);
-  justify-content: center;
+   background-image: url(./assets/wyo_valley_pattern_2.svg);
+   justify-content: center;
 }
 
 button {
-  cursor: pointer;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
+   cursor: pointer;
+   appearance: none;
+   border: none;
+   outline: none;
+   background: none;
 }
 .app {
-  display: flex;
+   display: flex;
 }
 main {
-  flex: 1 1 0;
+   flex: 1 1 0;
 
-  padding: 2rem;
-  padding-top: 6rem;
-  @media (max-width: 768px) {
-    padding-left: 6rem;
-  }
+   padding: 2rem;
+   padding-top: 6rem;
+   @media (max-width: 768px) {
+      padding-left: 6rem;
+   }
 }
 
 
