@@ -3,7 +3,7 @@
     <main class="home-page">
         <div class="portrait-intro">
             <div class="portrait-image">
-                <img src="../../portrait_drawn_med.svg" class="image" alt="vue">
+                <img src="../../public/portrait_drawn_med.svg" class="image" alt="vue">
             </div>
             <div class="intro-block">
                 <h1>{{ content.introTitle }}</h1>
