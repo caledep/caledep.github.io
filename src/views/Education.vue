@@ -164,89 +164,98 @@
 </script>
 <style lang="scss" scoped>
 main {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  color: var(--primary);
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   color: var(--primary);
 
-  li {
-     font-size: 22px;
+   li {
+      font-size: 22px;
 
-     position: -12px;
-     padding-left: 20px;
-  }
-  p {
-     font-size: 18px;
-  }
-  hr {
-     border-color: var(--primary-hover);
-  }
-  .cell {
-     padding: 2rem;
-     background: #FFFCE2;
-     border: solid;
-     border-width: 0.2rem;
-     border-color: var(--primary);
-     border-radius:2em; 
-  }
-  .top-block {
-     display: flex;
-     flex-flow: row;
-     flex-wrap: wrap;
-     gap: 2rem;
-  }
-  .bottom-block {
-     max-width: 87rem;
-  }
-  .resume-block {
-     display: flex;
-     flex-direction: column;
-     gap: 2rem;
-  }
-  .skills-block {
-     display: flex;
-     flex-flow: row;
-     flex-wrap:wrap;
-     max-width: 60rem;
-     gap: 2rem;
-     div {
-        flex-grow: 1;
-        li:first-child {
-           padding-block-start: 1rem;
-        }
-     }
-  }
-  .edu-block {
-     display: flex;
-     flex-direction: column;
-     max-width: 60rem;
-     gap: 2rem;
-  }
-  .tech-block {
-     display: flex;
-     flex-direction: column;
-     flex-grow: 1;
-     flex-shrink: 1;
-     max-width: 25rem;
-     min-width: 20rem;
-     h2 {
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-     }
-  }
-  .degrees {
-     display: flex;
-     gap: 2rem;
-     padding-top: 1rem;
-     div{
-        text-align: center;
-        max-width: 24rem;
-     }
-  }
-  .achievements {
-     div {
-        padding-top: 1rem;
-     }
-  }
+      position: -12px;
+      padding-left: 20px;
+   }
+   p {
+      font-size: 18px;
+   }
+   hr {
+      border-color: var(--primary-hover);
+   }
+   .cell {
+      padding: 2rem;
+      background: #FFFCE2;
+      border: solid;
+      border-width: 0.2rem;
+      border-color: var(--primary);
+      border-radius:2em; 
+   }
+   .top-block {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+   }
+   .bottom-block {
+      max-width: 87rem;
+   }
+   .resume-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+   }
+   .skills-block {
+      display: flex;
+      flex-flow: row;
+      flex-wrap:wrap;
+      max-width: 60rem;
+      gap: 2rem;
+      div {
+         flex-grow: 1;
+         li:first-child {
+            padding-block-start: 1rem;
+         }
+      }
+   }
+   .edu-block {
+      display: flex;
+      flex-direction: column;
+      max-width: 60rem;
+      gap: 2rem;
+   }
+   .tech-block {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 1;
+      max-width: 25rem;
+      min-width: 20rem;
+      h2 {
+         padding-top: 2rem;
+         padding-bottom: 1rem;
+      }
+   }
+   .degrees {
+      display: flex;
+      gap: 2rem;
+      padding-top: 1rem;
+      div{
+         text-align: center;
+         max-width: 24rem;
+      }
+   }
+   .achievements {
+      div {
+         padding-top: 1rem;
+      }
+   }
+   @media (max-width:768px) {
+      li {
+         padding-left: 4px;
+      }
+      .degrees {
+         display: flex;
+         flex-direction: column;
+      }
+   }
 }
 </style>
