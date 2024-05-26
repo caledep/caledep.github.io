@@ -7,29 +7,29 @@ import Hobbies from "../views/Hobbies.vue"
 
 
 const router = createRouter({
-   history: createWebHistory(),
-   routes:[
-      {
-         path: '/',
-         component: Home
-      },
-      {
-         path: '/education',
-         component: Education
-      },
-      {
-         path: '/timeline',
-         component: Timeline
-      },
-      {
-         path: '/projects',
-         component: Projects
-      },
-      {
-         path: '/hobbies',
-         component: Hobbies
-      }
-   ]
+    history: createWebHistory(),
+    routes:[
+        {
+            path: '/',
+            component: Home
+        },
+        {
+            path: '/education',
+            component: Education
+        },
+        {
+            path: '/timeline',
+            component: Timeline
+        },
+        {
+            path: '/projects',
+            component: Projects
+        },
+        {
+            path: '/hobbies',
+            component: Hobbies
+        }
+    ]
 });
 
 export default router
