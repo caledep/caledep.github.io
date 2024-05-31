@@ -8,7 +8,7 @@
                  <h1>{{ title.hSkillTitle }}</h1>
                  <hr>
                  <div>
-                    <li v-for="hSkill in hSkills">
+                    <li v-for="hSkill in hSkills" :key="hSkill.skill">
                        {{ hSkill.skill }}
                     </li>
                  </div>
@@ -17,7 +17,7 @@
                  <h1>{{ title.sSkillTitle }}</h1>
                  <hr>
                  <div>
-                    <li v-for="sSkill in sSkills">
+                    <li v-for="sSkill in sSkills" :key="sSkill.skill">
                        {{ sSkill.skill }}
                     </li>
                  </div>
@@ -34,6 +34,7 @@
                        <p>{{ desc.eduLoc1 }}</p>
                        <p>{{ desc.eduDate1 }}</p>
                     </div>
+                    <hr>
                     <div>
                        <h2>{{ title.eduSubTitle2 }}</h2>
                        <p>{{ desc.edu2 }}</p>
@@ -68,13 +69,13 @@
            <hr>
            <div>
            <h2>{{ title.tSkillSubTitle1 }}</h2>
-           <li v-for="tSkill in tSkills1">
+           <li v-for="tSkill in tSkills1" :key="tSkill.skill">
               {{ tSkill.skill }}
            </li>
         </div>
         <div>
            <h2>{{ title.tSkillSubTitle2 }}</h2>
-           <li v-for="tSkill in tSkills2">
+           <li v-for="tSkill in tSkills2" :key="tSkill.skill">
               {{ tSkill.skill }}
            </li>
         </div>
