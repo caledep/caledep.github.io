@@ -1,31 +1,129 @@
 <template>
-    <main class="timeline-page">
-        <div class="card">
-            <h1>Timeline</h1>
-        </div>
-        <p class="construction_notice">
-            <img src="/icon_construction_dark.svg" class="icon" alt="construction icon" />
-            <b>This page is currently undergoing development, check back later.</b>
-            <img src="/icon_construction_dark.svg" class="icon" alt="construction icon" />
-        </p>
-    </main>
+  <main class="timeline-page">
+    <div class="header">
+      <div class="card">
+        <h1>Shaping Events</h1>
+      </div>
+    </div>
+    <div :class="`timelineDiv ${child_is_open ? 'child_is_open' : ''}`">
+      <div v-for="timelinePoint in timelinePoints" :key="timelinePoint.date">
+        <TimelineItem
+          :close_all_children="close_all_children"
+          :child_is_open="child_is_open"
+          :date="timelinePoint.date"
+          :title="timelinePoint.title"
+          :description="timelinePoint.description"
+          @child_expanded="is_child_expanded"
+          @child_closed="child_closed"
+          @close_children="close_children"
+          @close_reset="close_reset"
+        />
+      </div>
+    </div>
+  </main>
 </template>
 <script setup>
-
+import TimelineItem from '../components/TimelineItem.vue';
+import { ref } from 'vue';
+const timelinePoints = [
+  {
+    date: 2002,
+    title: 'Ate Some Bacon',
+    description: 'It was salty and delicious, I enjoyed every bite.',
+  },
+  {
+    date: 2004,
+    title: 'Ate Some Chicken',
+    description:
+      'It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite. It was juicy and delicious, I enjoyed every bite.',
+  },
+  {
+    date: 2010,
+    title:
+      'Ate Some super tasty extra crispy, deep fried, bacon wrapped chicken',
+    description: 'It was juicy and delicious, I enjoyed every bite.',
+  },
+  {
+    date: 2016,
+    title: 'Ate Some Chicken',
+    description: 'It was juicy and delicious, I enjoyed every bite.',
+  },
+  {
+    date: 2020,
+    title: 'Ran from covid',
+    description: 'It was juicy and delicious, I enjoyed every bite.',
+  },
+  {
+    date: 2024,
+    title: 'Made a website',
+    description: 'It was juicy and delicious, I enjoyed every bite.',
+  },
+];
+const close_all_children = ref(false);
+const child_is_open = ref(false);
+const is_child_expanded = () => {
+  child_is_open.value = true;
+};
+const child_closed = () => {
+  child_is_open.value = false;
+};
+const close_children = () => {
+  child_is_open.value = false;
+  close_all_children.value = true;
+};
+const close_reset = () => {
+  close_all_children.value = false;
+};
 </script>
-<style scoped>
-.construction_notice {
+<style lang="scss" scoped>
+.timeline-page {
+  max-width: fit-content;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  color: var(--primary);
+}
+.timelineDiv {
   display: flex;
-  width:100%;
+  flex-direction: column;
+  border: 9px solid var(--primary);
+  border-style: double;
+  outline: 4px solid var(--dark-alt);
+  outline-offset: -7px;
+  overflow: hidden;
+  background-color: rgba(35, 39, 87, 0.1);
+  // background-color: rgba(22, 26, 74, 0.2);
+  // background-color: rgba(192, 133, 82, 0.3);
+  // background-color: rgba(255, 252, 226, 0.5);
+  &.child_is_open {
+    max-width: 90.5rem;
+  }
+  @media (max-width: 768px) {
+    border: none;
+    outline: none;
+    background: none;
+  }
+}
+.header {
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  padding: 1rem;
 }
 .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: solid;
+  background: #fffce2;
+  border-width: 3px;
+  border-color: #161a4a;
+  border-radius: 1.5em;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 16px;
+    border-radius: 2em;
+  }
 }
 </style>
