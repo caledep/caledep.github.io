@@ -1,56 +1,55 @@
 <template>
-    <aside :class="`${is_expanded ? 'is_expanded' : ''}`">
-        <div class="logo">
-          <img src="../assets/cd_logo.svg" class="logo-icon" alt="vue">
-        </div>
+  <aside :class="`${is_expanded ? 'is_expanded' : ''}`">
+    <div class="logo">
+      <img src="../assets/cd_logo.svg" class="logo-icon" alt="vue" />
+    </div>
 
-        <div class="menu-toggle-wrap">
-          <button class="menu-toggle" @click="ToggleMenu">
-            <span class="material-icons">keyboard_double_arrow_right</span>
-          </button>
-        </div>
+    <div class="menu-toggle-wrap">
+      <button class="menu-toggle" @click="ToggleMenu">
+        <span class="material-icons">keyboard_double_arrow_right</span>
+      </button>
+    </div>
 
-
-        <div class="menu">
-          <router-link class="button" to="/">
-            <span class="material-icons">home</span>
-            <span class="text">Home</span>
-          </router-link>
-          <router-link class="button" to="/education">
-            <span class="material-icons">school</span>
-            <span class="text">Education & skills</span>
-          </router-link>
-          <router-link class="button" to="/timeline">
-            <span class="material-icons">timeline</span>
-            <span class="text">Timeline</span>
-          </router-link>
-          <router-link class="button" to="/projects">
-            <span class="material-icons">work_history</span>
-            <span class="text">Projects</span>
-          </router-link>
-          <router-link class="button" to="/hobbies">
-            <span class="material-icons">golf_course</span>
-            <span class="text">Hobbies</span>
-          </router-link>
-
-        </div>
-    </aside>
+    <div class="menu">
+      <router-link class="button" to="/">
+        <span class="material-icons">home</span>
+        <span class="text">Home</span>
+      </router-link>
+      <router-link class="button" to="/education">
+        <span class="material-icons">school</span>
+        <span class="text">Education & skills</span>
+      </router-link>
+      <router-link class="button" to="/timeline">
+        <span class="material-icons">timeline</span>
+        <span class="text">Timeline</span>
+      </router-link>
+      <router-link class="button" to="/projects">
+        <span class="material-icons">work_history</span>
+        <span class="text">Projects</span>
+      </router-link>
+      <router-link class="button" to="/hobbies">
+        <span class="material-icons">golf_course</span>
+        <span class="text">Hobbies</span>
+      </router-link>
+    </div>
+  </aside>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const is_expanded = ref(false)
+const is_expanded = ref(false);
 
 const ToggleMenu = () => {
-  is_expanded.value = !is_expanded.value
-}
+  is_expanded.value = !is_expanded.value;
+};
 </script>
 
 <style lang="scss" scoped>
 aside {
   display: flex;
   flex-direction: column;
+  min-width: 2rem;
   width: calc(2rem);
   min-height: 100vh;
   overflow-x: hidden;
@@ -79,11 +78,11 @@ aside {
     }
     &:hover {
       .text {
-        color: var(--dark-alt)
+        color: var(--dark-alt);
       }
     }
   }
-  
+
   .menu-toggle-wrap {
     display: flex;
     justify-content: flex-end;
@@ -131,9 +130,11 @@ aside {
         color: var(--light);
         transition: 0.4s ease-out;
       }
-      &:hover, &.router-link-exact-active {
+      &:hover,
+      &.router-link-exact-active {
         background-color: var(--primary-hover);
-        .material-icons, .text {
+        .material-icons,
+        .text {
           color: var(--dark-alt);
         }
       }
@@ -144,6 +145,7 @@ aside {
   }
 
   &.is_expanded {
+    min-width: var(--sidebar-width);
     width: var(--sidebar-width);
     .menu-toggle-wrap {
       top: -2.25rem;
@@ -151,7 +153,8 @@ aside {
         transform: rotate(-180deg);
       }
     }
-    h3, .button .text {
+    h3,
+    .button .text {
       opacity: 1;
     }
     .logo {
@@ -162,7 +165,7 @@ aside {
         .logo-icon {
           margin-right: 1rem;
         }
-    }
+      }
     }
     .button {
       .material-icons {
