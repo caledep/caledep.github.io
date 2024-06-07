@@ -17,9 +17,13 @@
       <div class="event">
         <div class="event-description">
           <h2>{{ title }}</h2>
-          <p v-if="is_expanded">
-            {{ description }}
-          </p>
+          <div class="description" v-if="is_expanded">
+            <p v-for="(p, index) in description" :key="index">
+              <br v-if="index > 0" />
+
+              {{ p.p }}
+            </p>
+          </div>
         </div>
         <div class="item-toggle-wrap">
           <button class="item-toggle" @click="ToggleItem">
@@ -36,10 +40,11 @@ import { defineEmits, ref, toRefs, watch, watchEffect } from 'vue';
 const props = defineProps({
   close_all_children: Boolean,
   child_is_open: Boolean,
-  date: Number,
+  date: String,
   title: String,
-  description: String,
+  description: Array,
 });
+const index = ref(0);
 const emit = defineEmits([
   'child_expanded',
   'child_closed',
@@ -87,7 +92,7 @@ watch(
   }
   .padding {
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 0rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     @media (max-width: 768px) {
@@ -103,15 +108,14 @@ watch(
       padding-left: 0rem;
     }
     .outline {
+      width: 102%;
       border-top: 1px solid var(--primary);
       border-right: 4px solid var(--primary);
       border-left: 4px solid var(--primary);
       border-bottom: 1px solid var(--primary);
       @media (max-width: 768px) {
-        // transform: translateX(-2.5rem);
-        // transform: translateY(-2rem);
         transform: translate(-2.5rem, -2rem);
-        z-index: -2;
+        z-index: -1;
       }
     }
     .fill {
@@ -170,42 +174,54 @@ watch(
   }
   .date {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     max-height: fit-content;
-    width: 4rem;
+    width: 5rem;
     @media (max-width: 768px) {
       transform: translateX(0.4rem);
       border-radius: 1em 0 0 1em;
       white-space: normal;
+      height: 2.5rem;
       h2 {
         font-size: 16px;
       }
-      width: 3rem;
+      width: 4rem;
     }
   }
 
   .event {
     display: flex;
     justify-content: flex-start;
+
     flex-direction: row;
     max-height: fit-content;
+    transform: translateX(-2rem);
     @media (max-width: 768px) {
       transform: translateX(-0.5rem);
-      border-radius: 0 1em 1em 1em;
+      border-radius: 0 1em 1em 0em;
+      min-width: 20rem;
+      height: 2.5rem;
     }
     .event-description {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-items: center;
       flex: 1;
       transition: 0.4s;
-      p {
+      .description {
         flex: 1;
         transition: 0.4s;
+        max-height: 0;
+        overflow: hidden;
       }
       h2 {
         max-width: 30ch;
         flex: 1;
         transition: 0.4s;
+        display: flex;
+        align-items: center;
         @media (max-width: 768px) {
           white-space: normal;
           font-size: 16px;
@@ -235,8 +251,7 @@ watch(
   &.is_expanded {
     @media (max-width: 768px) {
       display: flex;
-      flex-direction: column;
-      transition: flex-direction 0.4s;
+      // flex-direction: column;
     }
     .padding {
       @media (max-width: 768px) {
@@ -248,23 +263,53 @@ watch(
     }
     .timeline {
       transition: 0.4s;
+      @media (max-width: 768px) {
+        .fill {
+          transform: translate(1.5rem, -2rem);
+        }
+        .outline {
+          min-height: 4rem;
+          transform: translate(1.875rem, -2rem);
+        }
+      }
     }
     .event {
       max-width: fit-content;
+      z-index: -1;
+
       @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
         transform: none;
-        transform: translateY(-0.5rem);
         border-radius: 1em;
+        height: fit-content;
+      }
+      .event-description {
+        h2 {
+          @media (max-width: 768px) {
+            padding-left: 6.5rem;
+          }
+        }
+        .description {
+          transition: 1s;
+          padding-top: 2rem;
+          padding-left: 0.5rem;
+          max-height: fit-content;
+          overflow: visible;
+        }
       }
     }
     .date {
       transition: 0.4s;
+
       @media (max-width: 768px) {
         background: var(--primary-hover);
         color: var(--dark-alt);
-        border-radius: 1em 1em 1em 1em;
+        border-radius: 1em 0em 1em 0em;
+        position: absolute;
+        z-index: 1;
+        transform: translateX(1.75rem);
+        height: fit-content;
       }
     }
     .item-toggle-wrap {

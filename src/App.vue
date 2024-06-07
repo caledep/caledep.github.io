@@ -1,4 +1,3 @@
-
 <template>
   <div class="app">
     <Sidebar />
@@ -7,28 +6,26 @@
 </template>
 
 <script setup>
-import Sidebar from './components/Sidebar.vue'
-
-
-
+import Sidebar from './components/Sidebar.vue';
 </script>
 
 <style Lang="scss">
 :root {
-  --primary: #161A4A;
-  --primary-hover: #232757; 
+  --primary: #161a4a;
+  --primary-hover: #232757;
+  --clear: rgba(0, 0, 0, 0);
   --gray: #64748b;
   --dark: #1e293b;
-  --dark-alt: #C08552;
-  --light: #FFFCE2;
+  --dark-alt: #c08552;
+  --light: #fffce2;
   --sidebar-width: 280px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    font-family: 'Red Hat Display', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 body {
@@ -55,6 +52,4 @@ main {
     padding-left: 6rem;
   }
 }
-
-
 </style>
