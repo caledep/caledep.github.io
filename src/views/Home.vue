@@ -9,31 +9,25 @@
         />
       </div>
       <div class="intro-block">
-        <h1>{{ content.introTitle }}</h1>
+        <h1 v-if="json">{{ json.intro.title }}</h1>
         <hr />
-        <p>{{ content.intro }}</p>
+        <p v-if="json">{{ json.intro.desc }}</p>
       </div>
     </div>
 
     <div class="bio-block">
-      <h1>{{ content.bioTitle }}</h1>
+      <h1 v-if="json">{{ json.bio.title }}</h1>
       <hr />
-      <p>{{ content.bio1 }}</p>
-      <p>{{ content.bio2 }}</p>
-      <p>{{ content.bio3 }}</p>
+      <p v-if="json">{{ json.bio.desc1 }}</p>
+      <p v-if="json">{{ json.bio.desc2 }}</p>
+      <p v-if="json">{{ json.bio.desc3 }}</p>
     </div>
   </main>
 </template>
 <script setup>
-const content = {
-  introTitle: 'Intro',
-  intro:
-    "Hello! I'm Cale DePaolo, a passionate web developer and digital enthusiast based in the beautiful state of Wyoming. With a year and a half of professional experience in the tech industry, I've developed a strong foundation in creating seamless, user-friendly websites and applications. My journey started with a curiosity for coding and has quickly evolved into a rewarding career where I help companies create unique digital solutions. When I'm not immersed in coding, you can find me exploring Wyoming's stunning landscapes, experimenting with new recipes in the kitchen, or out at my local course for a round of golf. I believe in continuous learning and staying ahead of the curve in this fast-paced digital world. Welcome to my corner of the internet, where I share my projects and a little about myself. Let's build something amazing together!",
-  bioTitle: 'Bio',
-  bio1: 'I am a versatile software developer currently engaged in two exciting projects: developing this website and prototyping a web-based solution for a potential startup. With a year and a half of experience as a Front-End Software Engineer at Teladoc Health, I had the privilege of working with the myStrength team, where I honed my skills alongside a group of exceptional developers. This role significantly enhanced my full stack development abilities, complementing my prior focus on back-end development, API creation, and unit testing during my academic projects and internships.',
-  bio2: 'My senior design project with Western EcoSystems Technology (WEST) involved leveraging their AI model to create a solution for processing visual information, further broadening my technical expertise. I am passionate about learning and implementing new technologies to develop innovative software solutions.',
-  bio3: 'Currently, I am seeking my next professional opportunity in software development. I aim to continue expanding my skills and aspire to grow into a senior engineering role. I am eager to join a forward-thinking company that values continuous learning and offers opportunities for career advancement.',
-};
+// const json = ref(null);
+import json from '../assets/home.json';
+console.log('json: ', json.foo);
 </script>
 <style lang="scss" scoped>
 main {
