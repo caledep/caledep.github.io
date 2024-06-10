@@ -2,7 +2,7 @@
   <div :class="`item ${is_expanded ? 'is_expanded' : ''}`">
     <div class="mobile-space">
       <div class="padding">
-        <div class="date">
+        <div class="date" @click="ToggleItem">
           <h2>{{ date }}</h2>
         </div>
       </div>
@@ -53,13 +53,15 @@ const emit = defineEmits([
 ]);
 const closer = ref(false);
 const is_expanded = ref(false);
+function closeChildren() {
+  closer.value = true;
+  emit('close_children');
+}
+function otherChildOpen() {
+  return props.child_is_open && !is_expanded.value;
+}
 const ToggleItem = () => {
-  if (props.child_is_open && !is_expanded.value) {
-    closer.value = true;
-    emit('close_children');
-  } else {
-    closer.value = false;
-  }
+  otherChildOpen() ? closeChildren() : (closer.value = false);
   is_expanded.value = !is_expanded.value;
   is_expanded.value ? emit('child_expanded') : emit('child_closed');
 };
@@ -108,7 +110,7 @@ watch(
       padding-left: 0rem;
     }
     .outline {
-      width: 102%;
+      width: 100%;
       border-top: 1px solid var(--primary);
       border-right: 4px solid var(--primary);
       border-left: 4px solid var(--primary);
@@ -135,9 +137,9 @@ watch(
       border-left: 12px solid var(--primary);
       border-bottom: 1px solid var(--primary);
       transform: translateX(-20px);
-      margin-top: 3.5rem;
       height: 22px;
       border-radius: 2em;
+      align-self: center;
       @media (max-width: 768px) {
         margin-top: 1.625rem;
         display: none;
@@ -149,9 +151,9 @@ watch(
       border-left: 10px solid var(--dark-alt);
       border-bottom: 1px solid var(--dark-alt);
       transform: translateX(-42px);
-      margin-top: 3.625rem;
       height: 18px;
       border-radius: 2em;
+      align-self: center;
       @media (max-width: 768px) {
         margin-top: 1.75rem;
         display: none;
@@ -179,6 +181,7 @@ watch(
     justify-content: center;
     max-height: fit-content;
     width: 5rem;
+    user-select: none;
     @media (max-width: 768px) {
       transform: translateX(0.4rem);
       border-radius: 1em 0 0 1em;
@@ -254,11 +257,13 @@ watch(
       // flex-direction: column;
     }
     .padding {
+      align-self: center;
       @media (max-width: 768px) {
         padding-top: 0rem;
         padding-bottom: 0.5rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
+        align-self: flex-start;
       }
     }
     .timeline {
@@ -274,12 +279,12 @@ watch(
       }
     }
     .event {
+      display: flex;
+      flex-direction: column;
       max-width: fit-content;
       z-index: -1;
 
       @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
         transform: none;
         border-radius: 1em;
         height: fit-content;
@@ -292,16 +297,23 @@ watch(
         }
         .description {
           transition: 1s;
-          padding-top: 2rem;
-          padding-left: 0.5rem;
+          padding-top: 1rem;
           max-height: fit-content;
           overflow: visible;
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
+          @media (max-width: 768px) {
+            padding-top: 2rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+          }
         }
       }
     }
     .date {
+      // transition-delay: 250ms;
       transition: 0.4s;
-
+      // align-self: center;
       @media (max-width: 768px) {
         background: var(--primary-hover);
         color: var(--dark-alt);
