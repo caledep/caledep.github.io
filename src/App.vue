@@ -29,7 +29,7 @@ import Sidebar from './components/Sidebar.vue';
 }
 
 body {
-  background-image: url(./assets/wyo_valley_pattern_2.svg);
+  background-image: url(./assets/images/wyo_valley_pattern_2.svg);
   justify-content: center;
 }
 

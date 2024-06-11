@@ -3,7 +3,7 @@
     <div class="portrait-intro">
       <div class="portrait-image">
         <img
-          src="../../public/portrait_drawn_med.svg"
+          src="../assets/images/portrait_drawn_med.svg"
           class="image"
           alt="vue"
         />

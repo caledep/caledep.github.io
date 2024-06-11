@@ -1,0 +1,104 @@
+{
+  "edu": {
+    "title": "Education",
+    "desc1": {
+      "title": "Associates of Science in Computer Science",
+      "sch": "Casper College",
+      "loc": "Casper, Wyoming",
+      "date": "July 2017"
+    },
+    "desc2": {
+      "title": "Bachelors of Science in Orginizational Management",
+      "sch": "University of Wyoming",
+      "loc": "Laramie, Wyoming",
+      "date": "December 2024"
+    }
+  },
+  "achi": {
+    "title": "Achievements",
+    "desc1": {
+      "title": "Lead Front End Software Engineer",
+      "event": "myStrenth team (Teladoc Health)",
+      "desc": "In November 2023, I became the lead front end software engineer for migrating the myStrength services and clients into the unified oneApp platform of Teladoc."
+    },
+    "desc2": {
+      "title": "Wyohackathon 2019 Participant",
+      "event": "Breakin Through! Blockchain and Crypto (University of Wyoming)",
+      "desc": "Part of a team of four, that leveraged blockchain technologies integrated into a website to streamline the blockchain tokenization process."
+    },
+    "desc3": {
+      "title": "Top Software Team",
+      "event": "Software Engineering Course (University of Wyoming)",
+      "desc": "I was the lead developer for this team of four, hosted additional Java lectures and  learning sessions to help increase the abilities and knowledge of my team."
+    }
+  },
+  "hSkills": {
+    "title": "Hard Skills",
+    "skills":[
+      { "skill": "Software Engineering" },
+      { "skill": "Full Cycle Development" },
+      { "skill": "Database Management" },
+      { "skill": "Testing/Debugging" },
+      { "skill": "Web Development" },
+      { "skill": "OOP/OOD" },
+      { "skill": "Data Analysis" },
+      { "skill": "Agile Skills" },
+      { "skill": "System Design" },
+      { "skill": "Wire Framing" }
+    ]
+  },
+  "sSkills": {
+    "title": "Soft Skills",
+    "skills":[
+      { "skill": "Problem Solving" },
+      { "skill": "Self-Management" },
+      { "skill": "Adaptability" },
+      { "skill": "Communication" },
+      { "skill": "Public Speaking" },
+      { "skill": "Ownership" },
+      { "skill": "Persistence" },
+      { "skill": "Orginization" },
+      { "skill": "Attention to Detail" },
+      { "skill": "Master of Learning" }
+    ]
+  },
+  "tSkills": {
+    "title": {
+      "main": "Technical Skills",
+      "sub1": "Language Proficiencies:",
+      "sub2": "Additional Skills:"},
+    "set1":[
+      { "skill": "Java" },
+      { "skill": "c" },
+      { "skill": "c++" },
+      { "skill": "c#" },
+      { "skill": "JavaScript" },
+      { "skill": "HTML/CSS" },
+      { "skill": "python" },
+      { "skill": "SQL" },
+      { "skill": "Bash" },
+      { "skill": "Vue" }
+    ],
+    "set2":[
+      { "skill": "Data Structures & Algorithms" },
+      { "skill": "Computer Networking" },
+      { "skill": "Collaboration" },
+      { "skill": "Pair Programming" },
+      { "skill": "Stand Ups" },
+      { "skill": "Sprint Planning" },
+      { "skill": "Quarterly Planning" },
+      { "skill": "Version Control" },
+      { "skill": "Deployment" },
+      { "skill": "Containerization" },
+      { "skill": "DBMS/RDBMS" },
+      { "skill": "Hippa Standards" },
+      { "skill": "WCAG Compliance" },
+      { "skill": "Development Piplines" },
+      { "skill": "Unit Testing/e2e Testing" },
+      { "skill": "Code Reviews & Feedback" },
+      { "skill": "Technical Documentation" },
+      { "skill": "Speaking about technical ideas with technical and non-technical audiences"},
+      { "skill": "Project Tracking Software" }
+    ]
+  }
+}
