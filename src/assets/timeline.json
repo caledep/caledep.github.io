@@ -64,7 +64,7 @@
   },
     {
     "date": "2019",
-    "title": "The Second Internship",
+    "title": "Second Internship",
     "desc": [
       {
         "p": "I was fortunate to return for a second internship at Adbay (now Kalen Marketing Solutions), where my familiarity with the team and their understanding of my skills afforded me more autonomy. This time, I was tasked with revamping the scraping project I had worked on the previous summer. Given the freedom to choose, I opted to rewrite the scraper in Python, leveraging skills I had developed earlier that year."
