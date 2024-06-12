@@ -69,15 +69,15 @@
       "sub2": "Additional Skills:"},
     "set1":[
       { "skill": "Java" },
-      { "skill": "c" },
-      { "skill": "c++" },
-      { "skill": "c#" },
       { "skill": "JavaScript" },
       { "skill": "HTML/CSS" },
-      { "skill": "python" },
       { "skill": "SQL" },
-      { "skill": "Bash" },
-      { "skill": "Vue" }
+      { "skill": "ASP.NET" },
+      { "skill": "C" },
+      { "skill": "C++" },
+      { "skill": "C#" },
+      { "skill": "Python" },
+      { "skill": "Bash" }
     ],
     "set2":[
       { "skill": "Data Structures & Algorithms" },
