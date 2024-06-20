@@ -2,48 +2,38 @@
   <main class="home-page">
     <div class="portrait-intro">
       <div class="portrait-image">
-        <img
-          src="../assets/images/portrait_drawn_med.svg"
-          class="image"
-          alt="vue"
-        />
+        <img :src="imagePath" class="image" alt="vue" />
+        <!-- <img src="getImageSrc(home_portrait.svg)" class="image" alt="vue" /> -->
       </div>
       <div class="intro-block">
-        <h1 v-if="json">{{ json.intro.title }}</h1>
+        <h1>{{ introTitle }}</h1>
         <hr />
-        <p v-if="json">{{ json.intro.desc }}</p>
+        <p>{{ introDesc }}</p>
       </div>
     </div>
 
     <div class="bio-block">
-      <h1 v-if="json">{{ json.bio.title }}</h1>
+      <h1>{{ bioTitle }}</h1>
       <hr />
-      <p v-if="json">{{ json.bio.desc1 }}</p>
-      <p v-if="json">{{ json.bio.desc2 }}</p>
-      <p v-if="json">{{ json.bio.desc3 }}</p>
+      <p>{{ bio1 }}</p>
+      <p>{{ bio2 }}</p>
+      <p>{{ bio3 }}</p>
     </div>
-
-    <InfoImage
-      :imagePath="imagePath"
-      :introTitle="json.intro.title"
-      :introDesc="json.intro.desc"
-      :bioTitle="json.bio.title"
-      :bio1="json.bio.desc1"
-      :bio2="json.bio.desc2"
-      :bio3="json.bio.desc3"
-    />
   </main>
 </template>
 <script setup>
-import InfoImage from '../components/InfoImage.vue';
-import json from '../assets/home.json';
-const imagePath = '/src/assets/images/home_portrait.svg';
+const imgName = 'home_portait.svg';
+const props = defineProps({
+  imagePath: String,
+  introTitle: String,
+  introDesc: String,
+  bioTitle: String,
+  bio1: String,
+  bio2: String,
+  bio3: String,
+});
 </script>
 <style lang="scss" scoped>
-template {
-  display: flex;
-  flex-direction: column;
-}
 main {
   display: flex;
   flex-direction: column;
@@ -73,10 +63,17 @@ main {
       border-width: 0.2rem;
       border-color: var(--primary);
       border-radius: 2em;
-      min-width: 24rem;
-      max-width: 24rem;
-      max-height: 30rem;
+      min-width: 300px;
+      // max-width: 24rem;
+      // max-height: 30rem;
       overflow: hidden;
+
+      // align-items: center;
+      // justify-content: center;
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
       @media (max-width: 768px) {
         display: flex;
         flex-direction: column;

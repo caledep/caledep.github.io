@@ -20,7 +20,6 @@
           <div class="description" v-if="is_expanded">
             <p v-for="(p, index) in description" :key="index">
               <br v-if="index > 0" />
-
               {{ p.p }}
             </p>
           </div>
