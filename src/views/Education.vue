@@ -5,7 +5,7 @@
         <div class="skills-block">
           <div class="cell">
             <h1>{{ json.hSkills.title }}</h1>
-            <hr />
+            <hr class="contRule" />
             <div>
               <li v-for="hSkill in json.hSkills.skills" :key="hSkill.skill">
                 {{ hSkill.skill }}
@@ -14,7 +14,7 @@
           </div>
           <div class="cell">
             <h1>{{ json.sSkills.title }}</h1>
-            <hr />
+            <hr class="contRule" />
             <div>
               <li v-for="sSkill in json.sSkills.skills" :key="sSkill.skill">
                 {{ sSkill.skill }}
@@ -25,7 +25,7 @@
         <div class="edu-block">
           <div class="education cell">
             <h1>{{ json.edu.title }}</h1>
-            <hr />
+            <hr class="contRule" />
             <div class="degrees">
               <div>
                 <h2>{{ json.edu.desc1.title }}</h2>
@@ -33,7 +33,7 @@
                 <p>{{ json.edu.desc1.loc }}</p>
                 <p>{{ json.edu.desc1.date }}</p>
               </div>
-              <hr />
+              <hr class="contRule" />
               <div>
                 <h2>{{ json.edu.desc2.title }}</h2>
                 <p>{{ json.edu.desc2.sch }}</p>
@@ -44,7 +44,7 @@
           </div>
           <div class="achievements cell">
             <h1>{{ json.achi.title }}</h1>
-            <hr />
+            <hr class="contRule" />
             <div>
               <h2>{{ json.achi.desc1.title }}</h2>
               <h4>{{ json.achi.desc1.event }}</h4>
@@ -65,7 +65,7 @@
       </div>
       <div class="tech-block cell">
         <h1>{{ json.tSkills.title.main }}</h1>
-        <hr />
+        <hr class="contRule" />
         <div>
           <h2>{{ json.tSkills.title.sub1 }}</h2>
           <li v-for="tSkill in json.tSkills.set1" :key="tSkill.skill">
@@ -93,8 +93,7 @@ import json from '../assets/education.json';
 main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  color: var(--primary);
+  color: $primary;
 
   li {
     font-size: 22px;
@@ -102,18 +101,16 @@ main {
     position: -12px;
     padding-left: 20px;
   }
-  p {
-    font-size: 18px;
-  }
+
   hr {
-    border-color: var(--primary-hover);
+    border-color: $primary-hover;
   }
   .cell {
     padding: 2rem;
     background: #fffce2;
     border: solid;
     border-width: 0.2rem;
-    border-color: var(--primary);
+    border-color: $primary;
     border-radius: 2em;
   }
   .top-block {

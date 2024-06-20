@@ -87,7 +87,7 @@ watch(
   display: flex;
   flex-direction: row;
   justify-items: flex-start;
-  color: var(--primary);
+  color: $primary;
   .mobile-space {
     display: flex;
     flex-direction: row;
@@ -111,20 +111,20 @@ watch(
     }
     .outline {
       width: 100%;
-      border-top: 1px solid var(--primary);
-      border-right: 4px solid var(--primary);
-      border-left: 4px solid var(--primary);
-      border-bottom: 1px solid var(--primary);
+      border-top: 1px solid $primary;
+      border-right: 4px solid $primary;
+      border-left: 4px solid $primary;
+      border-bottom: 1px solid $primary;
       @media (max-width: 768px) {
         transform: translate(-2.5rem, -2rem);
         z-index: -1;
       }
     }
     .fill {
-      border-top: 1px solid var(--dark-alt);
-      border-right: 2px solid var(--dark-alt);
-      border-left: 2px solid var(--dark-alt);
-      border-bottom: 1px solid var(--dark-alt);
+      border-top: 1px solid $dark-alt;
+      border-right: 2px solid $dark-alt;
+      border-left: 2px solid $dark-alt;
+      border-bottom: 1px solid $dark-alt;
       transform: translateX(-6px);
       @media (max-width: 768px) {
         transform: translate(-2.865rem, -2rem);
@@ -132,10 +132,10 @@ watch(
       }
     }
     .marker-outline {
-      border-top: 1px solid var(--primary);
-      border-right: 12px solid var(--primary);
-      border-left: 12px solid var(--primary);
-      border-bottom: 1px solid var(--primary);
+      border-top: 1px solid $primary;
+      border-right: 12px solid $primary;
+      border-left: 12px solid $primary;
+      border-bottom: 1px solid $primary;
       transform: translateX(-20px);
       height: 22px;
       border-radius: 2em;
@@ -146,10 +146,10 @@ watch(
       }
     }
     .marker-fill {
-      border-top: 1px solid var(--dark-alt);
-      border-right: 10px solid var(--dark-alt);
-      border-left: 10px solid var(--dark-alt);
-      border-bottom: 1px solid var(--dark-alt);
+      border-top: 1px solid $dark-alt;
+      border-right: 10px solid $dark-alt;
+      border-left: 10px solid $dark-alt;
+      border-bottom: 1px solid $dark-alt;
       transform: translateX(-42px);
       height: 18px;
       border-radius: 2em;
@@ -243,9 +243,9 @@ watch(
         font-size: 34px;
         transition: 0.4s ease-in-out;
         &:hover {
-          color: var(--dark-alt);
+          color: $dark-alt;
           @media (max-width: 768px) {
-            color: var(--primary);
+            color: $primary;
           }
         }
       }
@@ -315,8 +315,8 @@ watch(
       transition: 0.4s;
       // align-self: center;
       @media (max-width: 768px) {
-        background: var(--primary-hover);
-        color: var(--dark-alt);
+        background: $primary-hover;
+        color: $dark-alt;
         border-radius: 1em 0em 1em 0em;
         position: absolute;
         z-index: 1;

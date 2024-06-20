@@ -47,15 +47,15 @@ const close_reset = () => {
   max-width: fit-content;
   flex-wrap: wrap;
   flex: 1 1 auto;
-  color: var(--primary);
+  color: $primary;
 }
 .timelineDiv {
   display: flex;
   flex-direction: column;
-  border: 9px solid var(--primary);
+  border: 9px solid $primary;
   border-style: double;
   border-radius: 2em;
-  outline: 4px solid var(--dark-alt);
+  outline: 4px solid $dark-alt;
   outline-offset: -7px;
   overflow: hidden;
   background-color: rgba(35, 39, 87, 0.1);

@@ -25,11 +25,7 @@
   </main>
 </template>
 <script setup></script>
-<style scoped>
-.projects-page {
-  max-width: 87rem;
-  color: var(--primary);
-}
+<style lang="scss" scoped>
 .construction_notice {
   display: flex;
   width: fit-content;
