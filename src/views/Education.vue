@@ -3,7 +3,7 @@
     <div class="top-block">
       <div class="resume-block">
         <div class="skills-block">
-          <div class="contFrame">
+          <div class="cont-frame">
             <h1>{{ json.hSkills.title }}</h1>
             <hr />
             <div>
@@ -12,7 +12,7 @@
               </li>
             </div>
           </div>
-          <div class="contFrame">
+          <div class="cont-frame">
             <h1>{{ json.sSkills.title }}</h1>
             <hr />
             <div>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="edu-block">
-          <div class="education contFrame">
+          <div class="education cont-frame">
             <h1>{{ json.edu.title }}</h1>
             <hr />
             <div class="degrees">
@@ -42,7 +42,7 @@
               </div>
             </div>
           </div>
-          <div class="achievements contFrame">
+          <div class="achievements cont-frame">
             <h1>{{ json.achi.title }}</h1>
             <hr />
             <div>
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="tech-block contFrame">
+      <div class="tech-block cont-frame">
         <h1>{{ json.tSkills.title.main }}</h1>
         <hr />
 

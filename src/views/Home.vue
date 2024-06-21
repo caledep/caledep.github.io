@@ -1,17 +1,17 @@
 <template>
   <main class="home-page">
     <div class="portrait-intro">
-      <div class="portrait-image imgFrame">
+      <div class="portrait-image img-frame">
         <img src="../assets/images/home_portrait.svg" class="image" alt="vue" />
       </div>
-      <div class="intro-block contFrame">
+      <div class="intro-block cont-frame">
         <h1 v-if="json">{{ json.intro.title }}</h1>
         <hr />
         <p v-if="json">{{ json.intro.desc }}</p>
       </div>
     </div>
 
-    <div class="bio-block contFrame">
+    <div class="bio-block cont-frame">
       <h1 v-if="json">{{ json.bio.title }}</h1>
       <hr />
       <p v-if="json">{{ json.bio.desc1 }}</p>

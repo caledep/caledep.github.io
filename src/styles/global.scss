@@ -1,7 +1,7 @@
 @import "vars.scss";
 
 // Class Styling
-.imgFrame {
+.img-frame {
   border: solid;
   border-color: red;
   border-width: 3px;
@@ -10,7 +10,7 @@
   object-position: center;
 }
 
-.contFrame {
+.cont-frame {
   padding: $pad;
   color: red;
   background: $light;
@@ -19,9 +19,10 @@
   border-color: red;
   max-height: fit-content;
   border-radius: 2em; 
+  @media (max-width: $media_width) {
+    padding: $pad_half;
+  }
 }
-
-
 
 // Component Styling
 main {
