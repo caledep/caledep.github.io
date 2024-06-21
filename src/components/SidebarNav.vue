@@ -55,8 +55,8 @@ aside {
   overflow-x: hidden;
   overflow-y: visible;
   padding: 1rem;
-  background-color: var(--primary);
-  color: var(--light);
+  background-color: $primary;
+  color: $light;
   transition: 0.4s ease-out;
   .logo {
     display: flex;
@@ -66,7 +66,7 @@ aside {
       transition: 0.4s ease-out;
       .logo-icon {
         font-size: 2rem;
-        color: var(--light);
+        color: $light;
         transition: 0.4s ease-out;
       }
     }
@@ -78,7 +78,7 @@ aside {
     }
     &:hover {
       .text {
-        color: var(--dark-alt);
+        color: $dark-alt;
       }
     }
   }
@@ -94,12 +94,12 @@ aside {
       transition: 0.4s ease-out;
       .material-icons {
         font-size: 2rem;
-        color: var(--light);
+        color: $light;
         transition: 0.4s ease-out;
       }
       &:hover {
         .material-icons {
-          color: var(--dark-alt);
+          color: $dark-alt;
           transform: translateX(0.3rem);
         }
       }
@@ -123,30 +123,30 @@ aside {
       transition: 0.4s ease-out;
       .material-icons {
         font-size: 2rem;
-        color: var(--light);
+        color: $light;
         transition: 0.4s ease-out;
       }
       .text {
-        color: var(--light);
+        color: $light;
         transition: 0.4s ease-out;
       }
       &:hover,
       &.router-link-exact-active {
-        background-color: var(--primary-hover);
+        background-color: $primary-hover;
         .material-icons,
         .text {
-          color: var(--dark-alt);
+          color: $dark-alt;
         }
       }
       &.router-link-exact-active {
-        border-right: 6px solid var(--dark-alt);
+        border-right: 6px solid $dark-alt;
       }
     }
   }
 
   &.is_expanded {
-    min-width: var(--sidebar-width);
-    width: var(--sidebar-width);
+    min-width: $sidebar-width;
+    width: $sidebar-width;
     .menu-toggle-wrap {
       top: -2.25rem;
       .menu-toggle {
@@ -159,7 +159,7 @@ aside {
     }
     .logo {
       .text {
-        color: var(--light);
+        color: $light;
       }
       .button {
         .logo-icon {
@@ -174,7 +174,7 @@ aside {
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $media_width) {
     position: fixed;
     z-index: 99;
     height: 100%;

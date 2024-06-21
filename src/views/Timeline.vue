@@ -1,7 +1,7 @@
 <template>
   <main class="timeline-page">
     <div class="header">
-      <div class="card">
+      <div class="card cont-frame">
         <h1>Shaping Events</h1>
       </div>
     </div>
@@ -43,54 +43,46 @@ const close_reset = () => {
 };
 </script>
 <style lang="scss" scoped>
-.timeline-page {
-  max-width: fit-content;
+main {
   flex-wrap: wrap;
   flex: 1 1 auto;
-  color: var(--primary);
-}
-.timelineDiv {
-  display: flex;
-  flex-direction: column;
-  border: 9px solid var(--primary);
-  border-style: double;
-  border-radius: 2em;
-  outline: 4px solid var(--dark-alt);
-  outline-offset: -7px;
-  overflow: hidden;
-  background-color: rgba(35, 39, 87, 0.1);
-  &.child_is_open {
-    max-width: 90.5rem;
+  color: $primary;
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: $pad_half;
+    .card {
+      padding-top: $pad_half;
+      padding-bottom: $pad_half;
+      border-radius: 1.5em;
+      @media (max-width: $media_width) {
+        padding: $pad_half;
+        font-size: 16px;
+      }
+    }
   }
-  @media (max-width: 768px) {
-    border: none;
-    outline: none;
-    background: none;
-    overflow: hidden;
-    border-radius: 0;
-  }
-}
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  padding: 1rem;
-}
-.card {
-  padding: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border: solid;
-  background: #fffce2;
-  border-width: 3px;
-  border-color: #161a4a;
-  border-radius: 1.5em;
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-    font-size: 16px;
+  .timelineDiv {
+    display: flex;
+    flex-direction: column;
+    border: 9px solid $primary;
+    border-style: double;
     border-radius: 2em;
+    outline: 4px solid $dark-alt;
+    outline-offset: -7px;
+    overflow: hidden;
+    background-color: rgba(35, 39, 87, 0.1);
+    @media (max-width: $media_width) {
+      border: none;
+      outline: none;
+      background: none;
+      overflow: hidden;
+      border-radius: 0;
+    }
+  }
+  @media (max-width: $media_width) {
+    transform: translateX(-6px);
   }
 }
 </style>
