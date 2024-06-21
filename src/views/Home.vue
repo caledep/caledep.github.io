@@ -2,22 +2,18 @@
   <main class="home-page">
     <div class="portrait-intro">
       <div class="portrait-image imgFrame">
-        <img
-          src="../assets/images/portrait_drawn_med.svg"
-          class="image"
-          alt="vue"
-        />
+        <img src="../assets/images/home_portrait.svg" class="image" alt="vue" />
       </div>
       <div class="intro-block contFrame">
         <h1 v-if="json">{{ json.intro.title }}</h1>
-        <hr class="contRule" />
+        <hr />
         <p v-if="json">{{ json.intro.desc }}</p>
       </div>
     </div>
 
     <div class="bio-block contFrame">
       <h1 v-if="json">{{ json.bio.title }}</h1>
-      <hr class="contRule" />
+      <hr />
       <p v-if="json">{{ json.bio.desc1 }}</p>
       <p v-if="json">{{ json.bio.desc2 }}</p>
       <p v-if="json">{{ json.bio.desc3 }}</p>
@@ -33,29 +29,27 @@ main {
   .portrait-intro {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 32px;
     align-items: flex-end;
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      max-width: 100%;
+    @media (max-width: $media_width) {
       flex-wrap: wrap;
     }
     .portrait-image {
-      @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        align-items: flex-start;
+      display: flex;
+      flex-basis: 30%;
+      min-width: 300px;
+      @media (max-width: $media_width) {
+        width: fit-content;
+        flex-grow: 1;
       }
     }
-
     .intro-block {
-      @media (max-width: 768px) {
-        display: flex;
-        min-width: 20rem;
-        flex-direction: column;
-        max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 70%;
+      @media (max-width: $media_width) {
+        width: fit-content;
+        flex-grow: 1;
       }
     }
   }
@@ -63,10 +57,8 @@ main {
     p {
       padding-bottom: 20px;
     }
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
+    p:last-child {
+      padding-bottom: 0;
     }
   }
 }

@@ -62,7 +62,7 @@ const close_reset = () => {
   &.child_is_open {
     max-width: 90.5rem;
   }
-  @media (max-width: 768px) {
+  @media (max-width: $media_width) {
     border: none;
     outline: none;
     background: none;
@@ -87,7 +87,7 @@ const close_reset = () => {
   border-color: #161a4a;
   border-radius: 1.5em;
 
-  @media (max-width: 768px) {
+  @media (max-width: $media_width) {
     padding: 1rem;
     font-size: 16px;
     border-radius: 2em;

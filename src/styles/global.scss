@@ -7,11 +7,11 @@
   border-width: 3px;
   border-radius: 2em;
   overflow: hidden;
-  min-width: 300px;
+  object-position: center;
 }
 
 .contFrame {
-  padding: 32px;
+  padding: $pad;
   color: red;
   background: $light;
   border: solid;
@@ -21,20 +21,22 @@
   border-radius: 2em; 
 }
 
-.contRule {
-  border-top: 1px solid red;
-}
+
 
 // Component Styling
 main {
   display: flex;
   flex-direction: column;
-  padding: 32px;
-  padding-top: 96px;
-  gap: 32px;
+  padding: $pad;
+  padding-top: $pad_double;
+  gap: $pad;
   max-width: 1440px;
-  @media (max-width: 768px) {
+  @media (max-width: $media_width) {
     padding-left: 96px;
+    width: fit-content;
+    li {
+      padding-left: 4px;
+    }
   }
 }
 
@@ -53,6 +55,14 @@ img {
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
+hr {
+  border: 1px solid red;
+}
+
+li {
+  font-size: 22px;
+  padding-left: 10px;
+}

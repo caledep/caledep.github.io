@@ -3,18 +3,18 @@
     <div class="top-block">
       <div class="resume-block">
         <div class="skills-block">
-          <div class="cell">
+          <div class="contFrame">
             <h1>{{ json.hSkills.title }}</h1>
-            <hr class="contRule" />
+            <hr />
             <div>
               <li v-for="hSkill in json.hSkills.skills" :key="hSkill.skill">
                 {{ hSkill.skill }}
               </li>
             </div>
           </div>
-          <div class="cell">
+          <div class="contFrame">
             <h1>{{ json.sSkills.title }}</h1>
-            <hr class="contRule" />
+            <hr />
             <div>
               <li v-for="sSkill in json.sSkills.skills" :key="sSkill.skill">
                 {{ sSkill.skill }}
@@ -23,9 +23,9 @@
           </div>
         </div>
         <div class="edu-block">
-          <div class="education cell">
+          <div class="education contFrame">
             <h1>{{ json.edu.title }}</h1>
-            <hr class="contRule" />
+            <hr />
             <div class="degrees">
               <div>
                 <h2>{{ json.edu.desc1.title }}</h2>
@@ -33,7 +33,7 @@
                 <p>{{ json.edu.desc1.loc }}</p>
                 <p>{{ json.edu.desc1.date }}</p>
               </div>
-              <hr class="contRule" />
+              <hr />
               <div>
                 <h2>{{ json.edu.desc2.title }}</h2>
                 <p>{{ json.edu.desc2.sch }}</p>
@@ -42,9 +42,9 @@
               </div>
             </div>
           </div>
-          <div class="achievements cell">
+          <div class="achievements contFrame">
             <h1>{{ json.achi.title }}</h1>
-            <hr class="contRule" />
+            <hr />
             <div>
               <h2>{{ json.achi.desc1.title }}</h2>
               <h4>{{ json.achi.desc1.event }}</h4>
@@ -63,9 +63,10 @@
           </div>
         </div>
       </div>
-      <div class="tech-block cell">
+      <div class="tech-block contFrame">
         <h1>{{ json.tSkills.title.main }}</h1>
-        <hr class="contRule" />
+        <hr />
+
         <div>
           <h2>{{ json.tSkills.title.sub1 }}</h2>
           <li v-for="tSkill in json.tSkills.set1" :key="tSkill.skill">
@@ -80,10 +81,7 @@
         </div>
       </div>
     </div>
-    <div class="bottom-block">
-      <h1></h1>
-      <div></div>
-    </div>
+    <div class="bottom-block"></div>
   </main>
 </template>
 <script setup>
@@ -91,94 +89,74 @@ import json from '../assets/education.json';
 </script>
 <style lang="scss" scoped>
 main {
-  display: flex;
-  flex-direction: column;
-  color: $primary;
-
-  li {
-    font-size: 22px;
-
-    position: -12px;
-    padding-left: 20px;
-  }
-
-  hr {
-    border-color: $primary-hover;
-  }
-  .cell {
-    padding: 2rem;
-    background: #fffce2;
-    border: solid;
-    border-width: 0.2rem;
-    border-color: $primary;
-    border-radius: 2em;
-  }
   .top-block {
     display: flex;
     flex-flow: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  .bottom-block {
-    max-width: 87rem;
-  }
-  .resume-block {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .skills-block {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    max-width: 60rem;
-    gap: 2rem;
-    div {
-      flex-grow: 1;
-      li:first-child {
-        padding-block-start: 1rem;
+    flex-wrap: nowrap;
+    gap: $pad;
+    .resume-block {
+      display: flex;
+      flex-direction: column;
+      gap: $pad;
+      .skills-block {
+        display: flex;
+        gap: $pad;
+        div {
+          flex-basis: 50%;
+          li:first-child {
+            padding-block-start: $pad_half;
+          }
+        }
+      }
+      .edu-block {
+        display: flex;
+        flex-direction: column;
+        gap: $pad;
+
+        .degrees {
+          display: flex;
+          gap: $pad;
+          padding-top: $pad_half;
+          div {
+            text-align: center;
+            flex-basis: 50%;
+          }
+        }
+        .achievements {
+          div {
+            padding-top: $pad_half;
+          }
+        }
+      }
+    }
+    .tech-block {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1.19;
+      h2 {
+        padding-top: $pad_half;
+        padding-bottom: $pad_half;
+      }
+      div:last-child h2 {
+        padding-top: $pad_double;
       }
     }
   }
-  .edu-block {
-    display: flex;
-    flex-direction: column;
-    max-width: 60rem;
-    gap: 2rem;
-  }
-  .tech-block {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    max-width: 25rem;
-    min-width: 20rem;
-    h2 {
-      padding-top: 2rem;
-      padding-bottom: 1rem;
-    }
-  }
-  .degrees {
-    display: flex;
-    gap: 2rem;
-    padding-top: 1rem;
-    div {
-      text-align: center;
-      max-width: 24rem;
-    }
-  }
-  .achievements {
-    div {
-      padding-top: 1rem;
-    }
-  }
-  @media (max-width: 768px) {
-    li {
-      padding-left: 4px;
+  @media (max-width: $media_width) {
+    .skills-block {
+      flex-direction: column;
     }
     .degrees {
       display: flex;
       flex-direction: column;
+    }
+  }
+  @media (max-width: 1326px) {
+    .top-block {
+      flex-wrap: wrap;
+    }
+    .tech-block {
+      flex-grow: 1;
     }
   }
 }

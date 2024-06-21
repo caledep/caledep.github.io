@@ -174,7 +174,7 @@ aside {
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $media_width) {
     position: fixed;
     z-index: 99;
     height: 100%;

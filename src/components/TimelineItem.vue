@@ -97,7 +97,7 @@ watch(
     padding-right: 0rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    @media (max-width: 768px) {
+    @media (max-width: $media_width) {
       padding: 0rem;
       padding-bottom: 0.5rem;
     }
@@ -106,7 +106,7 @@ watch(
     padding-left: 2rem;
     display: flex;
     flex-direction: row;
-    @media (max-width: 768px) {
+    @media (max-width: $media_width) {
       padding-left: 0rem;
     }
     .outline {
@@ -115,7 +115,7 @@ watch(
       border-right: 4px solid $primary;
       border-left: 4px solid $primary;
       border-bottom: 1px solid $primary;
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         transform: translate(-2.5rem, -2rem);
         z-index: -1;
       }
@@ -126,7 +126,7 @@ watch(
       border-left: 2px solid $dark-alt;
       border-bottom: 1px solid $dark-alt;
       transform: translateX(-6px);
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         transform: translate(-2.865rem, -2rem);
         z-index: -1;
       }
@@ -140,7 +140,7 @@ watch(
       height: 22px;
       border-radius: 2em;
       align-self: center;
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         margin-top: 1.625rem;
         display: none;
       }
@@ -154,7 +154,7 @@ watch(
       height: 18px;
       border-radius: 2em;
       align-self: center;
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         margin-top: 1.75rem;
         display: none;
       }
@@ -169,7 +169,7 @@ watch(
     border-width: 3px;
     border-color: #161a4a;
     border-radius: 2em;
-    @media (max-width: 768px) {
+    @media (max-width: $media_width) {
       padding: 1rem;
       border-raius: 1em;
     }
@@ -182,7 +182,7 @@ watch(
     max-height: fit-content;
     width: 5rem;
     user-select: none;
-    @media (max-width: 768px) {
+    @media (max-width: $media_width) {
       transform: translateX(0.4rem);
       border-radius: 1em 0 0 1em;
       white-space: normal;
@@ -201,7 +201,7 @@ watch(
     flex-direction: row;
     max-height: fit-content;
     transform: translateX(-2rem);
-    @media (max-width: 768px) {
+    @media (max-width: $media_width) {
       transform: translateX(-0.5rem);
       border-radius: 0 1em 1em 0em;
       min-width: 20rem;
@@ -225,7 +225,7 @@ watch(
         transition: 0.4s;
         display: flex;
         align-items: center;
-        @media (max-width: 768px) {
+        @media (max-width: $media_width) {
           white-space: normal;
           font-size: 16px;
         }
@@ -244,7 +244,7 @@ watch(
         transition: 0.4s ease-in-out;
         &:hover {
           color: $dark-alt;
-          @media (max-width: 768px) {
+          @media (max-width: $media_width) {
             color: $primary;
           }
         }
@@ -252,13 +252,13 @@ watch(
     }
   }
   &.is_expanded {
-    @media (max-width: 768px) {
+    @media (max-width: $media_width) {
       display: flex;
       // flex-direction: column;
     }
     .padding {
       align-self: center;
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         padding-top: 0rem;
         padding-bottom: 0.5rem;
         padding-right: 0.5rem;
@@ -268,7 +268,7 @@ watch(
     }
     .timeline {
       transition: 0.4s;
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         .fill {
           transform: translate(1.5rem, -2rem);
         }
@@ -284,14 +284,14 @@ watch(
       max-width: fit-content;
       z-index: -1;
 
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         transform: none;
         border-radius: 1em;
         height: fit-content;
       }
       .event-description {
         h2 {
-          @media (max-width: 768px) {
+          @media (max-width: $media_width) {
             padding-left: 6.5rem;
           }
         }
@@ -302,7 +302,7 @@ watch(
           overflow: visible;
           padding-left: 0.25rem;
           padding-right: 0.25rem;
-          @media (max-width: 768px) {
+          @media (max-width: $media_width) {
             padding-top: 2rem;
             padding-left: 0.5rem;
             padding-right: 0.5rem;
@@ -314,7 +314,7 @@ watch(
       // transition-delay: 250ms;
       transition: 0.4s;
       // align-self: center;
-      @media (max-width: 768px) {
+      @media (max-width: $media_width) {
         background: $primary-hover;
         color: $dark-alt;
         border-radius: 1em 0em 1em 0em;

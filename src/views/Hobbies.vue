@@ -45,7 +45,7 @@
 .notice {
   padding-left: 4rem;
   padding-right: 4rem;
-  @media (max-width: 768px) {
+  @media (max-width: $media_width) {
     padding: 0rem;
   }
 }
@@ -73,7 +73,7 @@
   border-color: #161a4a;
   border-radius: 1.5em;
 
-  @media (max-width: 768px) {
+  @media (max-width: $media_width) {
     padding: 1rem;
     font-size: 16px;
     border-radius: 2em;
