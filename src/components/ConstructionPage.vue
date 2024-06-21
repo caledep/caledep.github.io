@@ -51,6 +51,7 @@ const msg = 'This page is currently undergoing development, check back later.';
     }
     @media (max-width: $media_width) {
       font-size: 16px;
+      padding: $pad_half;
     }
   }
   .body {

@@ -3,7 +3,7 @@
 // Class Styling
 .img-frame {
   border: solid;
-  border-color: red;
+  border-color: $primary;
   border-width: 3px;
   border-radius: 2em;
   overflow: hidden;
@@ -12,11 +12,11 @@
 
 .cont-frame {
   padding: $pad;
-  color: red;
+  color: $primary;
   background: $light;
   border: solid;
   border-width: $border-width;
-  border-color: red;
+  border-color: $primary;
   max-height: fit-content;
   border-radius: 2em; 
   @media (max-width: $media_width) {
@@ -60,7 +60,7 @@ p {
 }
 
 hr {
-  border: 1px solid red;
+  border: 1px solid $primary;
 }
 
 li {

@@ -33,6 +33,7 @@ main {
     align-items: flex-end;
     @media (max-width: $media_width) {
       flex-wrap: wrap;
+      padding-top: $pad_half;
     }
     .portrait-image {
       display: flex;

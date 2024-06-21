@@ -154,6 +154,7 @@ main {
   @media (max-width: 1326px) {
     .top-block {
       flex-wrap: wrap;
+      padding-top: $pad_half;
     }
     .tech-block {
       flex-grow: 1;

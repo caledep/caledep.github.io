@@ -2,7 +2,7 @@
   <div :class="`item ${is_expanded ? 'is_expanded' : ''}`">
     <div class="mobile-space">
       <div class="padding">
-        <div class="date" @click="ToggleItem">
+        <div class="date cont-frame" @click="ToggleItem">
           <h2>{{ date }}</h2>
         </div>
       </div>
@@ -14,13 +14,12 @@
       </div>
     </div>
     <div class="padding">
-      <div class="event">
+      <div class="event cont-frame">
         <div class="event-description">
           <h2>{{ title }}</h2>
           <div class="description" v-if="is_expanded">
             <p v-for="(p, index) in description" :key="index">
               <br v-if="index > 0" />
-
               {{ p.p }}
             </p>
           </div>
@@ -81,7 +80,6 @@ watch(
   }
 );
 </script>
-
 <style lang="scss" scoped>
 .item {
   display: flex;
@@ -93,21 +91,21 @@ watch(
     flex-direction: row;
   }
   .padding {
-    padding-left: 2rem;
-    padding-right: 0rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-left: $pad;
+    padding-right: 0;
+    padding-top: $pad_half;
+    padding-bottom: $pad_half;
     @media (max-width: $media_width) {
-      padding: 0rem;
-      padding-bottom: 0.5rem;
+      padding: 0;
+      padding-bottom: $pad_quart;
     }
   }
   .timeline {
-    padding-left: 2rem;
+    padding-left: $pad;
     display: flex;
     flex-direction: row;
     @media (max-width: $media_width) {
-      padding-left: 0rem;
+      padding-left: 0;
     }
     .outline {
       width: 100%;
@@ -116,7 +114,7 @@ watch(
       border-left: 4px solid $primary;
       border-bottom: 1px solid $primary;
       @media (max-width: $media_width) {
-        transform: translate(-2.5rem, -2rem);
+        transform: translate(-40px, -32px);
         z-index: -1;
       }
     }
@@ -127,7 +125,7 @@ watch(
       border-bottom: 1px solid $dark-alt;
       transform: translateX(-6px);
       @media (max-width: $media_width) {
-        transform: translate(-2.865rem, -2rem);
+        transform: translate(-46px, -32px);
         z-index: -1;
       }
     }
@@ -141,7 +139,6 @@ watch(
       border-radius: 2em;
       align-self: center;
       @media (max-width: $media_width) {
-        margin-top: 1.625rem;
         display: none;
       }
     }
@@ -155,23 +152,8 @@ watch(
       border-radius: 2em;
       align-self: center;
       @media (max-width: $media_width) {
-        margin-top: 1.75rem;
         display: none;
       }
-    }
-  }
-
-  .date,
-  .event {
-    padding: 2rem;
-    border: solid;
-    background: #fffce2;
-    border-width: 3px;
-    border-color: #161a4a;
-    border-radius: 2em;
-    @media (max-width: $media_width) {
-      padding: 1rem;
-      border-raius: 1em;
     }
   }
   .date {
@@ -179,33 +161,28 @@ watch(
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: fit-content;
-    width: 5rem;
-    user-select: none;
+    width: 80px;
     @media (max-width: $media_width) {
-      transform: translateX(0.4rem);
+      transform: translateX(6px);
       border-radius: 1em 0 0 1em;
-      white-space: normal;
-      height: 2.5rem;
+      height: 40px;
       h2 {
         font-size: 16px;
       }
-      width: 4rem;
+      width: $pad_double;
     }
   }
-
   .event {
     display: flex;
     justify-content: flex-start;
-
     flex-direction: row;
     max-height: fit-content;
-    transform: translateX(-2rem);
+    transform: translateX(-32px);
     @media (max-width: $media_width) {
-      transform: translateX(-0.5rem);
+      transform: translateX(-8px);
       border-radius: 0 1em 1em 0em;
-      min-width: 20rem;
-      height: 2.5rem;
+      min-width: 280px;
+      height: 40px;
     }
     .event-description {
       display: flex;
@@ -226,7 +203,6 @@ watch(
         display: flex;
         align-items: center;
         @media (max-width: $media_width) {
-          white-space: normal;
           font-size: 16px;
         }
       }
@@ -236,7 +212,7 @@ watch(
       justify-items: flex-end;
       align-items: center;
       transition: 0.4s ease-in-out;
-      padding-left: 2rem;
+      padding-left: $pad;
       align-self: flex-end;
 
       .material-symbols-outlined {
@@ -252,17 +228,13 @@ watch(
     }
   }
   &.is_expanded {
-    @media (max-width: $media_width) {
-      display: flex;
-      // flex-direction: column;
-    }
     .padding {
       align-self: center;
       @media (max-width: $media_width) {
-        padding-top: 0rem;
-        padding-bottom: 0.5rem;
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-top: 0;
+        padding-bottom: $pad_quart;
+        padding-right: $pad_quart;
+        padding-left: $pad_quart;
         align-self: flex-start;
       }
     }
@@ -270,11 +242,11 @@ watch(
       transition: 0.4s;
       @media (max-width: $media_width) {
         .fill {
-          transform: translate(1.5rem, -2rem);
+          transform: translate(24px, -32px);
         }
         .outline {
-          min-height: 4rem;
-          transform: translate(1.875rem, -2rem);
+          min-height: $pad_double;
+          transform: translate(30px, -32px);
         }
       }
     }
@@ -292,35 +264,36 @@ watch(
       .event-description {
         h2 {
           @media (max-width: $media_width) {
-            padding-left: 6.5rem;
+            padding-left: 104px;
           }
         }
         .description {
           transition: 1s;
-          padding-top: 1rem;
+          padding-top: $pad_half;
           max-height: fit-content;
           overflow: visible;
-          padding-left: 0.25rem;
-          padding-right: 0.25rem;
+          padding-left: 4px;
+          padding-right: 4px;
           @media (max-width: $media_width) {
-            padding-top: 2rem;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
+            padding-top: $pad;
+            padding-left: $pad_quart;
+            padding-right: $pad_quart;
+            p {
+              font-size: 16px;
+            }
           }
         }
       }
     }
     .date {
-      // transition-delay: 250ms;
       transition: 0.4s;
-      // align-self: center;
       @media (max-width: $media_width) {
         background: $primary-hover;
         color: $dark-alt;
         border-radius: 1em 0em 1em 0em;
         position: absolute;
         z-index: 1;
-        transform: translateX(1.75rem);
+        transform: translateX(28px);
         height: fit-content;
       }
     }
@@ -329,6 +302,9 @@ watch(
       .item-toggle {
         transform: rotate(180deg);
       }
+    }
+    @media (max-width: $media_width) {
+      display: flex;
     }
   }
 }
