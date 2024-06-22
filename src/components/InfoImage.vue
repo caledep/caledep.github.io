@@ -1,120 +1,93 @@
 <template>
-  <main class="home-page">
-    <div class="portrait-intro">
-      <div class="portrait-image">
+  <div class="info-image">
+    <div v-if="props.useIntroBlock" class="top-block-wrapper">
+      <div class="image-block img-frame">
         <img :src="imagePath" class="image" alt="vue" />
         <!-- <img src="getImageSrc(home_portrait.svg)" class="image" alt="vue" /> -->
       </div>
-      <div class="intro-block">
-        <h1>{{ introTitle }}</h1>
+      <div class="intro-block cont-frame">
+        <h1>{{ introObj.title }}</h1>
         <hr />
-        <p>{{ introDesc }}</p>
+        <p>{{ introObj.desc }}</p>
       </div>
     </div>
-
-    <div class="bio-block">
-      <h1>{{ bioTitle }}</h1>
-      <hr />
-      <p>{{ bio1 }}</p>
-      <p>{{ bio2 }}</p>
-      <p>{{ bio3 }}</p>
+    <div v-else class="top-block-wrapper">
+      <div class="image-block image-fill img-frame">
+        <img :src="imagePath" class="image" alt="vue" />
+      </div>
+      <div class="intro-list cont-frame">
+        <ListBlock :objectList="props.introObj" />
+      </div>
     </div>
-  </main>
+    <div class="bio-block cont-frame">
+      <h1>{{ bodyTitle }}</h1>
+      <hr />
+      <div v-for="(p, index) in bodyDesc" :key="index" class="body-desc">
+        <br v-if="index > 0" />
+        <p>{{ p }}</p>
+      </div>
+    </div>
+  </div>
 </template>
 <script setup>
-const imgName = 'home_portait.svg';
+import ListBlock from './ListBlock.vue';
 const props = defineProps({
   imagePath: String,
-  introTitle: String,
-  introDesc: String,
-  bioTitle: String,
-  bio1: String,
-  bio2: String,
-  bio3: String,
+  useIntroBlock: Boolean,
+  introObj: Object,
+  bodyTitle: String,
+  bodyDesc: Array,
 });
 </script>
 <style lang="scss" scoped>
-main {
+.info-image {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  hr {
-    border-top: 1px solid var(--primary);
-  }
-  div {
-    color: var(--primary);
-  }
-  p {
-    font-size: 20px;
-  }
-  .portrait-intro {
+  gap: $pad;
+  padding-top: $pad_half;
+  .top-block-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: $pad;
     align-items: flex-end;
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      max-width: 100%;
+    justify-content: space-between;
+    @media (max-width: $media_width) {
       flex-wrap: wrap;
+      padding-top: $pad_half;
     }
-    .portrait-image {
-      border: solid;
-      border-width: 0.2rem;
-      border-color: var(--primary);
-      border-radius: 2em;
+    .image-block {
+      display: flex;
+      flex-basis: 30%;
       min-width: 300px;
-      // max-width: 24rem;
-      // max-height: 30rem;
-      overflow: hidden;
-
-      // align-items: center;
-      // justify-content: center;
-      img {
-        max-width: 100%;
-        height: 100%;
-      }
-      @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        align-items: flex-start;
+      @media (max-width: $media_width) {
+        width: fit-content;
+        flex-grow: 1;
       }
     }
-
+    .image-fill {
+      flex-basis: 60%;
+    }
     .intro-block {
-      padding: 2rem;
-      background: #fffce2;
-      border: solid;
-      border-width: 0.2rem;
-      border-color: var(--primary);
-      max-height: fit-content;
-      max-width: calc(87rem - 24rem - 2rem - 0.4rem);
-      border-radius: 2em;
-      @media (max-width: 768px) {
-        display: flex;
-        min-width: 20rem;
-        flex-direction: column;
-        max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 70%;
+      @media (max-width: $media_width) {
+        width: fit-content;
+        flex-grow: 1;
+      }
+    }
+    .intro-list {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 40%;
+      @media (max-width: $media_width) {
+        width: fit-content;
+        flex-grow: 1;
       }
     }
   }
-  .bio-block {
-    padding: 2rem;
-    border: solid;
-    max-width: 87rem;
-    background: #fffce2;
-    border-width: 3px;
-    border-color: #161a4a;
-    border-radius: 2em;
-    p {
-      padding-bottom: 20px;
-    }
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-    }
+  @media (max-width: $media_width) {
+    padding-top: 0;
   }
 }
 </style>

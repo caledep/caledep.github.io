@@ -37,8 +37,8 @@
 <script setup>
 import { defineEmits, ref, toRefs, watch, watchEffect } from 'vue';
 const props = defineProps({
-  close_all_children: Boolean,
-  child_is_open: Boolean,
+  closeAllChildren: Boolean,
+  childIsOpen: Boolean,
   date: String,
   title: String,
   description: Array,
@@ -57,7 +57,7 @@ function closeChildren() {
   emit('close_children');
 }
 function otherChildOpen() {
-  return props.child_is_open && !is_expanded.value;
+  return props.childIsOpen && !is_expanded.value;
 }
 const ToggleItem = () => {
   otherChildOpen() ? closeChildren() : (closer.value = false);
@@ -65,9 +65,9 @@ const ToggleItem = () => {
   is_expanded.value ? emit('child_expanded') : emit('child_closed');
 };
 watch(
-  () => props.close_all_children,
+  () => props.closeAllChildren,
   () => {
-    if (props.close_all_children) {
+    if (props.closeAllChildren) {
       is_expanded.value = closer.value;
       closer.value = false;
       if (is_expanded.value) {

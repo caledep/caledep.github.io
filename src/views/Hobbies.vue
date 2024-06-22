@@ -5,6 +5,7 @@
 </template>
 <script setup>
 import ConstructionPage from '../components/ConstructionPage.vue';
+import InfoImage from '../components/InfoImage.vue';
 </script>
 <style lang="scss" scoped>
 main {

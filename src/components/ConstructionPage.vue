@@ -43,7 +43,7 @@ const msg = 'This page is currently undergoing development, check back later.';
     align-self: center;
     font-size: 24px;
     padding: $pad;
-    padding-top: 0;
+    padding-top: $pad_half;
     .slot-style {
       padding-top: $pad_half;
       padding-bottom: $pad_half;

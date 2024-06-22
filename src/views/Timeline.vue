@@ -8,8 +8,8 @@
     <div :class="`timelineDiv ${child_is_open ? 'child_is_open' : ''}`">
       <div v-for="timelinePoint in json" :key="timelinePoint.date">
         <TimelineItem
-          :close_all_children="close_all_children"
-          :child_is_open="child_is_open"
+          :closeAllChildren="close_all_children"
+          :childIsOpen="child_is_open"
           :date="timelinePoint.date"
           :title="timelinePoint.title"
           :description="timelinePoint.desc"
