@@ -15,7 +15,7 @@
 <script setup>
 import InfoImage from '../components/InfoImage.vue';
 import json from '../assets/home.json';
-const imagePath = '/src/assets/images/home_portrait.svg';
+const imagePath = '../assets/images/home_portrait.svg';
 </script>
 <style lang="scss" scoped>
 main {
