@@ -29,10 +29,10 @@ main {
   display: flex;
   flex-direction: column;
   padding: $pad;
+  padding-left: 96px;
   padding-top: $pad_double;
   max-width: 1440px;
   @media (max-width: $media_width) {
-    padding-left: 96px;
     padding-right: $pad;
     width: fit-content;
     li {
