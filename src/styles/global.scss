@@ -30,10 +30,10 @@ main {
   flex-direction: column;
   padding: $pad;
   padding-top: $pad_double;
-  gap: $pad;
   max-width: 1440px;
   @media (max-width: $media_width) {
     padding-left: 96px;
+    padding-right: $pad;
     width: fit-content;
     li {
       padding-left: 4px;

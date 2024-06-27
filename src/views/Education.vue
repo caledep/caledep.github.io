@@ -94,6 +94,7 @@ main {
     flex-flow: row;
     flex-wrap: nowrap;
     gap: $pad;
+    padding-top: $pad_half;
     .resume-block {
       display: flex;
       flex-direction: column;
