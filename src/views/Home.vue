@@ -1,7 +1,7 @@
 <template>
   <main class="home-page">
     <InfoImage
-      :imagePath="imagePath"
+      :image="image"
       :useIntroBlock="true"
       :introObj="{
         title: json.intro.title,
@@ -15,7 +15,7 @@
 <script setup>
 import InfoImage from '../components/InfoImage.vue';
 import json from '../assets/home.json';
-const imagePath = '../assets/images/home_portrait.svg';
+import image from '../assets/images/home_portrait.svg';
 </script>
 <style lang="scss" scoped>
 main {
