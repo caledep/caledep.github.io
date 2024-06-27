@@ -169,8 +169,11 @@ watch(
       h2 {
         font-size: 16px;
       }
-      width: $pad_double;
+      width: 55px;
     }
+  }
+  .date:hover {
+    background-color: $dark-alt;
   }
   .event {
     display: flex;
@@ -181,8 +184,9 @@ watch(
     @media (max-width: $media_width) {
       transform: translateX(-8px);
       border-radius: 0 1em 1em 0em;
-      min-width: 280px;
-      height: 40px;
+      // min-width: 240px;
+      padding: $pad_quart;
+      height: 56px;
     }
     .event-description {
       display: flex;
@@ -197,13 +201,14 @@ watch(
         overflow: hidden;
       }
       h2 {
-        max-width: 30ch;
+        min-width: 160px;
         flex: 1;
         transition: 0.4s;
         display: flex;
         align-items: center;
         @media (max-width: $media_width) {
-          font-size: 16px;
+          font-size: 15px;
+          padding: 0;
         }
       }
     }
@@ -224,6 +229,9 @@ watch(
             color: $primary;
           }
         }
+      }
+      @media (max-width: $media_width) {
+        padding-left: 0;
       }
     }
   }
@@ -262,9 +270,11 @@ watch(
         height: fit-content;
       }
       .event-description {
+        // align-content: space-between;
         h2 {
           @media (max-width: $media_width) {
             padding-left: 104px;
+            padding-bottom: $pad_half;
           }
         }
         .description {
@@ -275,9 +285,10 @@ watch(
           padding-left: 4px;
           padding-right: 4px;
           @media (max-width: $media_width) {
-            padding-top: $pad;
+            padding-top: $pad_half;
             padding-left: $pad_quart;
             padding-right: $pad_quart;
+            width: fit-content;
             p {
               font-size: 16px;
             }
@@ -287,6 +298,8 @@ watch(
     }
     .date {
       transition: 0.4s;
+      background: $primary-hover;
+      color: $dark-alt;
       @media (max-width: $media_width) {
         background: $primary-hover;
         color: $dark-alt;
@@ -306,6 +319,9 @@ watch(
     @media (max-width: $media_width) {
       display: flex;
     }
+  }
+  @media (max-width: $media_width) {
+    max-width: fit-content;
   }
 }
 </style>

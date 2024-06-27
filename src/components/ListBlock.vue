@@ -1,8 +1,8 @@
 <template>
-  <div v-for="(subj, label) in objectList" :key="label">
-    <div class="list">
+  <div v-for="(item, label) in objectList" :key="label">
+    <div class="list-item">
       <h2>{{ label }}:</h2>
-      <p>{{ subj }}</p>
+      <p>{{ item }}</p>
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@ const props = defineProps({
 });
 </script>
 <style lang="scss" scoped>
-.list {
+.list-item {
   display: flex;
   flex-direction: row;
   h2 {

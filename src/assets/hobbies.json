@@ -1,0 +1,35 @@
+{
+  "golf": {
+    "details": {
+      "Activity": "Golfing",
+      "Duration": "25 years",
+      "Frequency": "Weekly"
+    },
+    "desc": {
+      "title": "Golf",
+      "body": ["I have been golfing in various capacities throughout my life, and this game has been a constant source of learning and growth for me. The sport has instilled in me the importance of patience and consistency, both on and off the course. These lessons have profoundly shaped my approach to challenges, whether in my personal life or my career in software engineering."]
+    }
+  },
+  "food": {
+    "details": {
+      "Activity": "Food",
+      "Duration": "20 years",
+      "Frequency": "Daily"
+    },
+    "desc": {
+      "title": "Food",
+      "body": ["One of my earliest passions, I have loved creating elegant and unique dishes since I was young. My journey into fine dining began at the age of 17, and my enthusiasm for the culinary arts has only deepened over the years. Today, I take great pleasure in sharing my culinary expertise with friends and family, turning every meal into a memorable experience.", "I also love exploring new foods from different cultures and am never afraid to try something new. I believe cuisine is deeply intertwined with cultural identity and that experiencing new dishes is one of the best ways to connect with different cultures."]
+    }
+  },
+  "explore": {
+    "details": {
+      "Activity": "Exploring",
+      "Duration": "lifetime",
+      "Frequency": "As often as I can"
+    },
+    "desc": {
+      "title": "Explore",
+      "body": ["While I love traveling to other countries and immersing myself in diverse cultures, I also have a deep passion for exploring the Rocky Mountains right in my own backyard. Hiking, camping, and discovering new trails are essential activities for me in Wyoming", "Whether it’s a far-flung destination or the majestic local landscapes, my spirit of adventure drives me to explore and appreciate the beauty of the world around me."]
+    }
+  }
+}

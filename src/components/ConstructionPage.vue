@@ -1,10 +1,6 @@
 <template>
   <div class="construction-page">
-    <div class="header">
-      <div class="slot-style cont-frame">
-        <h1><slot /></h1>
-      </div>
-    </div>
+    <PageTitleHeader><slot /></PageTitleHeader>
     <div class="body cont-frame">
       <div>
         <img
@@ -29,6 +25,7 @@
   </div>
 </template>
 <script setup>
+import PageTitleHeader from './PageTitleHeader.vue';
 const msg = 'This page is currently undergoing development, check back later.';
 </script>
 <style lang="scss" scoped>
@@ -37,7 +34,6 @@ const msg = 'This page is currently undergoing development, check back later.';
   flex-direction: column;
   align-content: center;
   flex-grow: 1;
-  gap: $pad;
   .header {
     display: flex;
     align-self: center;
@@ -77,6 +73,7 @@ const msg = 'This page is currently undergoing development, check back later.';
   }
   @media (max-width: $media_width) {
     min-width: fit-content;
+    gap: $pad_quart;
   }
 }
 </style>
