@@ -27,7 +27,7 @@
     </div>
     <InfoImage
       v-if="selectedHobby !== ''"
-      :imagePath="imagePath"
+      :image="image"
       :useIntroBlock="false"
       :introObj="introObj"
       :bodyTitle="bodyTitle"
@@ -39,25 +39,30 @@
 import PageTitleHeader from '../components/PageTitleHeader.vue';
 import InfoImage from '../components/InfoImage.vue';
 import json from '../assets/hobbies.json';
+import golfImage from '../assets/images/golf.jpg';
+import foodImage from '../assets/images/food.jpg';
+import exploreImage from '../assets/images/explore.jpg';
 import { ref, watch } from 'vue';
-const imagePath = ref('');
+const image = ref('');
 let introObj, bodyTitle, bodyDesc;
 const selectedHobby = ref('');
 const selectHobby = (hobby) => {
   selectedHobby.value = hobby;
-  imagePath.value = '/src/assets/images/' + hobby.toLowerCase() + '.jpg';
   switch (hobby) {
     case 'Golf':
+      image.value = golfImage;
       introObj = json.golf.details;
       bodyTitle = json.golf.desc.title;
       bodyDesc = json.golf.desc.body;
       break;
     case 'Food':
+      image.value = foodImage;
       introObj = json.food.details;
       bodyTitle = json.food.desc.title;
       bodyDesc = json.food.desc.body;
       break;
     default:
+      image.value = exploreImage;
       introObj = json.explore.details;
       bodyTitle = json.explore.desc.title;
       bodyDesc = json.explore.desc.body;

@@ -2,7 +2,7 @@
   <div class="info-image">
     <div v-if="props.useIntroBlock" class="top-block-wrapper">
       <div class="image-block img-frame">
-        <img :src="imagePath" class="image" alt="vue" />
+        <img :src="`${image}`" class="image" alt="vue" />
         <!-- <img src="getImageSrc(home_portrait.svg)" class="image" alt="vue" /> -->
       </div>
       <div class="intro-block cont-frame">
@@ -13,7 +13,7 @@
     </div>
     <div v-else class="top-block-wrapper">
       <div class="image-block image-fill img-frame">
-        <img :src="imagePath" class="image" alt="vue" />
+        <img :src="`${image}`" class="image" alt="vue" />
       </div>
       <div class="intro-list cont-frame">
         <ListBlock :objectList="props.introObj" />
@@ -32,7 +32,7 @@
 <script setup>
 import ListBlock from './ListBlock.vue';
 const props = defineProps({
-  imagePath: String,
+  image: String,
   useIntroBlock: Boolean,
   introObj: Object,
   bodyTitle: String,
