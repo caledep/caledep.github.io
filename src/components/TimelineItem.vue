@@ -173,6 +173,8 @@ watch(
     }
   }
   .date:hover {
+    transition: 0.4s;
+
     background-color: $dark-alt;
   }
   .event {

@@ -55,11 +55,11 @@
               <h4>{{ json.achi.desc2.event }}</h4>
               <p>{{ json.achi.desc2.desc }}</p>
             </div>
-            <div>
+            <!-- <div>
               <h2>{{ json.achi.desc3.title }}</h2>
               <h4>{{ json.achi.desc3.event }}</h4>
               <p>{{ json.achi.desc3.desc }}</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -138,9 +138,9 @@ main {
         padding-top: $pad_half;
         padding-bottom: $pad_half;
       }
-      div:last-child h2 {
-        padding-top: $pad_double;
-      }
+      // div:last-child h2 {
+      //   padding-top: $pad_double;
+      // }
     }
   }
   @media (max-width: $media_width) {
