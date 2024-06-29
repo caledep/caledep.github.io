@@ -1,11 +1,5 @@
 <template>
   <main class="home-page">
-    <head>
-      <meta
-        name="google-site-verification"
-        content="Zk0ePp5L5G3Zi0VC4g_6m3GWsNlbmj4ArVE0vRFXk9Y"
-      />
-    </head>
     <InfoImage
       :image="image"
       :useIntroBlock="true"
