@@ -58,7 +58,6 @@ const props = defineProps({
     .image-block {
       display: flex;
       flex-basis: 30%;
-      min-width: 300px;
       @media (max-width: $media_width) {
         width: fit-content;
         flex-grow: 1;

@@ -1,0 +1,40 @@
+{
+"projectList" : [
+  {
+    "heading": "School Projects",
+    "date": "July 1, 2024",
+    "body": [
+      "I would like to provide you links to the repos of all the projects I have worked on throughout my education. Unfortunately, I will not be able to do that as the school I attended, The University of Wyoming, and Professors have been very adament that it is completely unacceptible to use any work I produced for this education in a personal portfolia or to claim any of this work as my own. I wish to respect their requests.", "In lieu of this, I'll just give a breif summary of some of these projects and their accompanied classes. I will not cover the 10+ math and theory classes such as networking, computation and complexity, etc."],
+    "list": {
+      "Class": "Project",
+      "Compilers": "Create custom compiler using Bison and Flex",
+      "Database Systems": "Built Relational database schema utilizing PostgreSQL",
+      "Software Design": "Built stand alone java app utilizing OOD/OOP for a jigsaw puzzle application, lead a team of 4 for this project.",
+      "Operating System Design": "Wrote my own processor pipeline utilizing priority queues",
+      "Linux Programming": "Shell scripting, custom Linux kernal with some focus on embedded systems.",
+      "Web Application Development": "Built mvc projects to facilitate a few small web applications.",
+      "Design and Implimentation In Emerging Environments": "More Complex mvc Project utilizing an angular and typscript stack with mySQL DB",
+      "Senior Design Project": "While I have more freedom to talk about this project it would be only a repeat of what has been described in the timeline page under Senior Design Project"
+    }
+  },
+  {
+    "heading": "Personal Website Project",
+    "date": "July 1, 2024",
+    "body": [
+      "As I mentioned under School Projects I do not have a way to show off the project work completed in school. Similarly, I don't have the option to show you my work in the Teladoc repos. This leaves me with two options:", "Option 1) I could repeat all the project work I had previously done. This option would provide almost nothing to me in return. This would not provide learning experiences, nor would it be accomplishing anything new.",
+      "Option 2) I could build a new portfolio, focusing on applying what I have learned from my professional experience as a software engineer for a global healthcare company.", 
+      "I decided Option 2 to be my best option going forward. I started designing this web application in April 2024 with the first rendition of this site going live in May 2024. I have set my repository for this site as public in my github and encourage you to take a look. I will continue to build onto this site for the next few months implementing new features and refining styling and theme work.", 
+      "Through researching into this project, I have been able to gather a substantial amount of information and knowledge that can be leveraged towards freelance projects."]
+  },
+  {
+    "heading": "Roadmap",
+    "date": "July 2, 2024",
+    "body": [
+      "There are several other things I want to do with this site before I would consider it in a completed state. This short list that follows is apt to change as needed, but I will make updates periodically regarding this matter.", 
+      "Currently, I do not have any contact information posted. I am very aware how easily that information can be scraped and spam can become an issue. To that point, I am planning to add in a contact page. The contact page will not contain any of my contact information but rather I'm looking to implement an SMTP service paired with a form, from which I will collect your information and allow you to email me through form submission. I'll recieve an email with your contact information and we can go from there.",
+      "There is currently no 'Back-end'. This is a static site. As I continue to rearch more into ways I can build and host a backends for free this situation may change. Consideration has also been made to use firebase which may be the more optimal solution for current needs.",
+      "Third party APIs play a huge part in any modern world web application. While it won't be as technically intricate as utilizing a third party API to act as an identity hosting and brokering service for the secure transfer of millions of individuals personal and medical information, like I did at Teladoc, I want to find someway to incorporate a third party API into this site, as a proof of concept."
+    ]
+  }
+]
+}

@@ -18,6 +18,7 @@ import SidebarNav from './components/SidebarNav.vue';
 
 body {
   background-image: url(./assets/images/wyo_valley_pattern_2.svg);
+  background-attachment: fixed;
 }
 
 .app {
