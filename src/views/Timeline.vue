@@ -53,7 +53,7 @@ main {
     outline: 4px solid $dark-alt;
     outline-offset: -7px;
     overflow: hidden;
-    background-color: rgba(35, 39, 87, 0.1);
+    background-color: $timelineClear;
     @media (max-width: $media_width) {
       border: none;
       outline: none;
