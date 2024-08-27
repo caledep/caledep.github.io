@@ -4,7 +4,7 @@
     "heading": "School Projects",
     "date": "July 1, 2024",
     "body": [
-      "I would like to provide you links to the repos of all the projects I have worked on throughout my education. Unfortunately, I will not be able to do that as the school I attended, The University of Wyoming, and Professors have been very adament that it is completely unacceptible to use any work I produced for this education in a personal portfolia or to claim any of this work as my own. I wish to respect their requests.", "In lieu of this, I'll just give a breif summary of some of these projects and their accompanied classes. I will not cover the 10+ math and theory classes such as networking, computation and complexity, etc."],
+      "I would like to provide you links to the repos of all the projects I have worked on throughout my education. Unfortunately, I will not be able to do that as the school I attended, The University of Wyoming, and Professors have been very adament that it is completely unacceptible to use any work I produced for this education in a personal portfolia or to claim any of this work as my own. I wish to respect their requests.", "In lieu of this, I'll just give a breif summary of some of these projects and their accompanied classes. I will not cover the math and theory classes such as networking, computation and complexity, etc."],
     "list": {
       "Class": "Project",
       "Compilers": "Create custom compiler using Bison and Flex",
